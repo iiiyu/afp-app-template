@@ -35,6 +35,12 @@ declared in `afp/manifest.json`.
    and `afp/state.sqlite`. No opportunistic refactors outside it.
 10. **One commit per milestone**, after verify is green, message
     `milestone <key>: <title>`.
+11. **You have exactly one turn.** Run every command — especially the verify
+    chain — in the foreground and wait for it to finish. Never launch
+    background work expecting to resume: nothing resumes, and AFP runs its
+    own authoritative verify on this machine after your turn, so leaving
+    processes running will corrupt it. If you cannot reach green, leave the
+    work uncommitted and state exactly what is red and why.
 
 ## Read Order
 

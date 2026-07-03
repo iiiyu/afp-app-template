@@ -2,12 +2,14 @@
   "contract": "afp-app-repo/v1",
   "template": {
     "name": "afp-app-template",
-    "version": "0.2.0"
+    "version": "0.3.0"
   },
   "app": {
     "display_name": "FactoryDemo",
     "bundle_id": "art.neuralcraft.factorydemo",
-    "platforms": ["ios"],
+    "platforms": [
+      "ios"
+    ],
     "identity_file": "Config/App.xcconfig"
   },
   "state_db": "afp/state.sqlite",
@@ -19,23 +21,49 @@
     "report": "afp/artifacts/verify.json",
     "failure_summary": "Scripts/xcresult-summary.sh",
     "gates": [
-      { "id": "gen", "oracle": "xcodegen regenerates the project cleanly" },
-      { "id": "format", "oracle": "swift format lint --strict finds nothing" },
-      { "id": "build_ios", "oracle": "iOS simulator build-for-testing succeeds, warnings as errors" },
-      { "id": "unit_tests", "oracle": "all Swift Testing unit tests pass" },
-      { "id": "ui_smoke", "oracle": "UITests/SmokeTests passes on simulator" },
-      { "id": "store_lint", "oracle": "Store/ metadata present and within App Store limits" }
-    ]
+      {
+        "id": "gen",
+        "oracle": "xcodegen regenerates the project cleanly"
+      },
+      {
+        "id": "format",
+        "oracle": "swift format lint --strict finds nothing"
+      },
+      {
+        "id": "build_ios",
+        "oracle": "iOS simulator build-for-testing succeeds, warnings as errors"
+      },
+      {
+        "id": "unit_tests",
+        "oracle": "all Swift Testing unit tests pass"
+      },
+      {
+        "id": "ui_smoke",
+        "oracle": "UITests/SmokeTests passes on simulator"
+      },
+      {
+        "id": "store_lint",
+        "oracle": "Store/ metadata present and within App Store limits"
+      }
+    ],
+    "simulator": "iPhone 17 Pro Max"
   },
   "release": {
     "archive": "Scripts/archive.sh",
     "publish": "Scripts/release.sh",
     "screenshots": "Scripts/screenshots.sh",
-    "human_gates": ["app_record_creation", "first_submission", "pricing", "kill_decision"]
+    "human_gates": [
+      "app_record_creation",
+      "first_submission",
+      "pricing",
+      "kill_decision"
+    ]
   },
   "skills": {
     "dir": ".skills",
-    "vendor": [".skills/vendor/asc"],
+    "vendor": [
+      ".skills/vendor/asc"
+    ],
     "first_party": [
       "scaffold-from-spec",
       "implement-milestone",

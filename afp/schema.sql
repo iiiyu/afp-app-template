@@ -28,3 +28,27 @@ CREATE TABLE IF NOT EXISTS build_evidence (
   updated_at TEXT NOT NULL,
   UNIQUE (milestone_key, file_path)
 );
+
+CREATE TABLE IF NOT EXISTS build_runs (
+  id TEXT PRIMARY KEY,
+  milestone_key TEXT,                   -- NULL for ad-hoc tasks
+  task_text TEXT,                       -- the ad-hoc objective when milestone_key is NULL
+  agent TEXT NOT NULL DEFAULT 'claude_code',
+  status TEXT NOT NULL DEFAULT 'queued',  -- queued | running | verifying | completed | failed
+  prompt TEXT,
+  agent_session_id TEXT,
+  agent_thread_id TEXT,
+  agent_turn_id TEXT,
+  transcript_path TEXT,
+  final_answer TEXT,
+  verify_json TEXT NOT NULL DEFAULT '{}',  -- AFP's authoritative verify report
+  verify_pass INTEGER,                     -- 1/0 once verified, NULL before
+  reviewed_at TEXT,                        -- the hard review gate: set by the operator in AFP
+  error TEXT,
+  started_at TEXT,
+  completed_at TEXT,
+  created_at TEXT NOT NULL,
+  updated_at TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS idx_build_runs_status ON build_runs(status);
