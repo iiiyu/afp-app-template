@@ -1,0 +1,15 @@
+# Generated project — rebuild with Scripts/gen.sh
+App.xcodeproj/
+
+# Build + verify outputs
+afp/artifacts/
+DerivedData/
+build/
+
+# Secrets — never committed
+Config/Signing.xcconfig
+*.p8
+*.p12
+*.mobileprovision
+
+.DS_Store

@@ -1,0 +1,4 @@
+// Shared build settings for all targets. Prefer adding settings here over project.yml.
+SWIFT_TREAT_WARNINGS_AS_ERRORS = YES
+GENERATE_INFOPLIST_FILE = YES
+ENABLE_USER_SCRIPT_SANDBOXING = YES

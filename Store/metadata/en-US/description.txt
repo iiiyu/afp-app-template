@@ -1,0 +1,3 @@
+FactoryDemo is the built-in demo app of afp-app-template. It exists so the verify gate chain always exercises a real app: a small checklist with add and toggle, built on the template design system.
+
+This metadata is placeholder content replaced by the store-assets skill from the spec package.

@@ -1,0 +1,10 @@
+// App identity. scaffold-from-spec rewrites this file; nothing else needs to change
+// for a rename (display name, bundle id, versions all live here).
+// PRODUCT_NAME stays "App" (target name) so TEST_HOST and build paths never break;
+// the user-visible name is the display name below.
+INFOPLIST_KEY_CFBundleDisplayName = FactoryDemo
+PRODUCT_BUNDLE_IDENTIFIER = art.neuralcraft.factorydemo
+MARKETING_VERSION = 0.1.0
+CURRENT_PROJECT_VERSION = 1
+
+#include? "Signing.xcconfig"

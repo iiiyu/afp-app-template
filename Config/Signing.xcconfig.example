@@ -1,0 +1,5 @@
+// AGENT NO-GO ZONE: signing identity, team, and provisioning are operated by
+// humans and by Scripts/archive.sh (App Store Connect API key). Agents must
+// never edit this file or reference credentials.
+CODE_SIGN_STYLE = Automatic
+// DEVELOPMENT_TEAM = REPLACE_ME
