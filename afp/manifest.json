@@ -2,7 +2,7 @@
   "contract": "afp-app-repo/v1",
   "template": {
     "name": "afp-app-template",
-    "version": "0.1.0"
+    "version": "0.2.0"
   },
   "app": {
     "display_name": "FactoryDemo",
@@ -36,7 +36,7 @@
   "skills": {
     "dir": ".skills",
     "vendor": [".skills/vendor/asc"],
-    "planned": [
+    "first_party": [
       "scaffold-from-spec",
       "implement-milestone",
       "cross-review",

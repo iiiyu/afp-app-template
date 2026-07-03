@@ -4,7 +4,7 @@ Skills are part of the template and version with it. App repos never edit
 skills locally; improvements flow back to `afp-app-template` and arrive via
 template version bumps.
 
-## First-party (planned — Sprint B)
+## First-party
 
 | Skill | Role | Fixed artifact | Gate |
 |---|---|---|---|
@@ -18,6 +18,6 @@ template version bumps.
 
 ## Vendored
 
-`vendor/asc/` — App Store Connect skills shipped with the `asc` CLI, pinned.
-Install/update only via `asc install-skills` into this directory, recorded as a
-template version change.
+`vendor/asc/` — App Store Connect skills shipped with the `asc` CLI, pinned
+(see `vendor/asc/VERSION`). Update only by re-running `asc install-skills` and
+copying here, recorded as a template version change.
